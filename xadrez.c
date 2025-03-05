@@ -6,16 +6,51 @@
 
 int main() {
     // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    // Declarando as variáveis inteiras de números de casas que devem ser percorridas no movimento
+    int Torremov = 5, Bispomov = 5, Rainhamov = 8, i = 0, casemenu = 0; 
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // Menu de escolha da peça que o usuário quer que se movimente
+    printf("Escolha a peça que você quer que se movimente:\n");
+    printf("1.Bispo\n");
+    printf("2.Torre\n");
+    printf("3.Rainha\n\n");
+    scanf(" %d",&casemenu);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    // Exibição do movimento da peça selecionada
+    printf("Início do movimento da peça - ");
+    switch (casemenu)
+    {
+    // Escolha do Bispo
+    case 1:
+        printf("Bispo\n");
+        while ( i < Bispomov){
+        printf("Cima,Direita\n");
+        i++;
+    }
+        printf("Final do movimento da peça.\n");
+        break;
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    // Escolha da Torre
+    case 2:
+        printf("Torre\n");
+        do {
+            printf("Direita\n");
+            i++;
+        }   while(i < Torremov);
+        break;
+    
+    // Escolha da Rainha
+    case 3:
+        printf("Rainha\n");
+        for(i;i < Rainhamov; i++) {
+            printf("Esquerda\n");
+        }
+        break;
+    // Escolha Inválida
+    default:
+        printf("Peça Inválida\n");
+        break;
+    }
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
