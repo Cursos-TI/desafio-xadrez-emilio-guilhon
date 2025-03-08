@@ -5,15 +5,15 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
     // Declarando as variáveis inteiras de números de casas que devem ser percorridas no movimento
-    int Torremov = 5, Bispomov = 5, Rainhamov = 8, i = 0, casemenu = 0; 
+    int Torremov = 5, Bispomov = 5, Rainhamov = 8, Cavalomov = 2, i = 0, casemenu = 0; 
 
     // Menu de escolha da peça que o usuário quer que se movimente
     printf("Escolha a peça que você quer que se movimente:\n");
     printf("1.Bispo\n");
     printf("2.Torre\n");
-    printf("3.Rainha\n\n");
+    printf("3.Rainha\n");
+    printf("4.Cavalo\n\n");
     scanf(" %d",&casemenu);
 
     // Exibição do movimento da peça selecionada
@@ -46,22 +46,29 @@ int main() {
             printf("Esquerda\n");
         }
         break;
+
+    // Escolha do Cavalo
+    case 4:
+        printf("Cavalo\n");
+        while(Cavalomov > 0){
+            for(i = 0;i<2;i++){
+                printf("Cima\n");
+            }
+
+            printf("Direita\n");
+            Cavalomov--;
+        }
+        break;
+
     // Escolha Inválida
     default:
         printf("Peça Inválida\n");
         break;
     }
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
 
     return 0;
 }
